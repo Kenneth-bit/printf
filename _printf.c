@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include <string.h>
 
-int _printf(char *format, ...)
+int _printf (char *format, ...)
 {
 	va_list args;
 	int res;
@@ -10,5 +10,6 @@ int _printf(char *format, ...)
 	va_start (args, format);
 	res = vfprintf (stdout, format, args);
 	va_end (args);
+	
 	return (res);
 }
